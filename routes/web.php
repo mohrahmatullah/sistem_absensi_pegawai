@@ -29,6 +29,9 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'as' => 'admin', 'mid
 
     // Route::resource('/employees','EmployeesController');
 
+    // Absensi Index
+    Route::get('/absensi','AbsensiController@index')->name('.absensi.index')->middleware('checkRole');
+
     // Employes Index
     Route::get('/company','CompanyController@index')->name('.company.index')->middleware('checkRole');
     // Employes Create 
@@ -42,17 +45,6 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'as' => 'admin', 'mid
     Route::post('/ajax/delete-item', 'AjaxController@selectedItemDeleteById')->name('.selected-item-delete')->middleware('checkRole');
     // Edit
     Route::post('/ajax/save-related-image', 'AjaxController@saveAllImage')->name('.save-related-image')->middleware('checkRole');
-
-    // User Index
-    Route::get('/users','UsersController@index')->name('.users.index')->middleware('checkRole');
-    // User Create 
-    Route::get('/users/create','UsersController@create')->name('.users.create')->middleware('checkRole');
-    Route::post('/users/store','UsersController@store')->name('.users.store')->middleware('checkRole');
-    // User Edit
-    Route::get('/users/edit/{id}','UsersController@edit')->name('.users.edit');
-    Route::put('/users/update/{id}','UsersController@update')->name('.users.update');
-    // User Delete
-    Route::delete('/users/delete/{id}','UsersController@delete')->name('.users.delete')->middleware('checkRole');
 });
 
 

@@ -5,8 +5,12 @@ Please make sure it is connected to the internet
 		
 		git clone https://gitlab.com/mohrahmatullah/grtech_test_teknik
 		
-	
+
+### Composer
+		Composer install
+
 ### Database connection
+Duplicate .env.example , rename to .env
 Create database and create find these fields in the .env file and enter your information
 
 		

@@ -48,11 +48,13 @@ class EmployeesController extends Controller
     {
         $employees = new Employees;
 
+        $employees->nik      = $request->nik;
         $employees->first_name      = $request->first_name;
         $employees->last_name     = $request->last_name;
         $employees->company_id  = $request->company_id;
         $employees->email     = $request->email;
         $employees->phone  = $request->phone;
+        $employees->address      = $request->address;
         
 
         if($employees->save())
@@ -128,11 +130,13 @@ class EmployeesController extends Controller
     {
         $employees = Employees::findOrFail($request->id);
 
+        $employees->nik      = $request->nik;
         $employees->first_name      = $request->first_name;
         $employees->last_name     = $request->last_name;
         $employees->company_id  = $request->company_id;
         $employees->email     = $request->email;
         $employees->phone  = $request->phone;
+        $employees->address      = $request->address;
 
         if($employees->save())
         {

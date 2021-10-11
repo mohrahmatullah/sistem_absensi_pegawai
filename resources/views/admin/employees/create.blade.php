@@ -27,6 +27,10 @@
       {{method_field('POST')}}
             <div class="box-body">
               <div class="form-group">
+                <label for="exampleInputEmail1">Nik</label>
+                <input type="name" name="nik" class="form-control" id="exampleInputEmail1" placeholder="Enter Nik">
+              </div>
+              <div class="form-group">
                 <label for="exampleInputEmail1">First name</label>
                 <input type="name" name="first_name" class="form-control" id="exampleInputEmail1" placeholder="Enter First Name">
               </div>
@@ -50,6 +54,10 @@
               <div class="form-group">
                 <label for="exampleInputPassword1">Phone</label>
                 <input type="name" name="phone" class="form-control" id="exampleInputPassword1" placeholder="Phone">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Address</label>
+                <input type="name" name="address" class="form-control" id="exampleInputPassword1" placeholder="Address">
               </div>
             </div>
             <!-- /.box-body -->

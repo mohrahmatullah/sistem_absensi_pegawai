@@ -105,6 +105,7 @@
           success: function(data)
           {
             if(dataObj.track == 'employees_list'){
+              $('#nik').val(data.nik);
               $('#id').val(data.id);
               $('#first_name').val(data.first_name);
               $('#last_name').val(data.last_name);
@@ -112,6 +113,7 @@
               $('#company_id').selectpicker('val', data.company_id);
               $('#email').val(data.email);
               $('#phone').val(data.phone);
+              $('#address').val(data.address);
             }
             if(dataObj.track == 'company_list'){
               $('#id').val(data.id);

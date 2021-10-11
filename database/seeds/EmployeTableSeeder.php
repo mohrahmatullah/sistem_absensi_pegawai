@@ -13,11 +13,13 @@ class EmployeTableSeeder extends Seeder
     {
         DB::table('employees')->insert([
             [
+                'nik' => '36090902930940293',
                 'first_name'     => 'moh',
                 'last_name'    => 'rahmatullah',
                 'company_id' => '1',
                 'email' => 'rahmat@email.com',
-                'phone' => '083876854003'
+                'phone' => '083876854003',
+                'address' => 'pandeglang'
             ]
         ]);
     }

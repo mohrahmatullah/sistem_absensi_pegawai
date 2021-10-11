@@ -21,7 +21,7 @@
         <div class="box-body">
 
             <div class="box-body table-responsive">
-              <table class="table table-bordered table-striped">
+              <table class="table table-bordered table-striped" id="example1">
                 <thead>
                 <tr>
 
@@ -29,6 +29,7 @@
                     <th>Full Name</th>
                     <th>Company</th>
                     <th>Email</th>
+                    <th>Phone</th>
                     <th>Action</th>
                     
                 </tr>
@@ -41,6 +42,7 @@
                       <td>{{$e->fullname}}</td>
                       <td><a href="#" data-toggle="modal" data-target="#myModal{{$loop->iteration}}">{{ isset($e->company) ? $e->company->name : ''}}</a></td>
                       <td>{{$e->email}}</td>
+                      <td>{{$e->phone}}</td>
                       <td>
                         <a href="#" class="btn btn-success" onclick="edit_item( <?= $e->id ?> ,'employees_list');">Edit</a>
                         <a href="#" class="btn btn-danger" onclick="deleted_item( <?= $e->id ?> ,'employees_list');">Delete
@@ -105,13 +107,6 @@
                     </div>
                 @endforeach
                 </tbody>
-                <tfoot>
-                  <tr>
-                    <td colspan="5" style="text-align: right;">
-                      {{ $employees->links() }}
-                    </td>
-                  </tr>
-                </tfoot>
 
               </table>
             </div>
@@ -141,6 +136,10 @@
           <div class="modal-body">
             <div class="box-body">
               <div class="form-group">
+                <label for="exampleInputEmail1">Nik</label>
+                <input type="name" name="nik" class="form-control" id="nik" placeholder="Enter Nik">
+              </div>
+              <div class="form-group">
                 <label for="exampleInputEmail1">First name</label>
                 <input type="hidden" name="id" class="form-control" id="id">
                 <input type="name" name="first_name" class="form-control" id="first_name" placeholder="Enter First Name">
@@ -165,6 +164,10 @@
               <div class="form-group">
                 <label for="exampleInputPassword1">Phone</label>
                 <input type="name" name="phone" class="form-control" id="phone" placeholder="Phone">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Address</label>
+                <input type="name" name="address" class="form-control" id="address" placeholder="address">
               </div>
             </div>
           </div>
