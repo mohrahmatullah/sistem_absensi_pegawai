@@ -15,9 +15,10 @@ class AbsensiController extends Controller
      */
     public function index()
     {
-        $attendance = Attendance::all();
-        $arr = get_defined_vars();
-        dd($arr);
+        $attendance = Attendance::leftjoin('employees','employees.nik','attendance.nik')->get();
+        // $arr = get_defined_vars();
+        // dd($arr);
+        return view('admin.absensi.index', compact('attendance'));
     }
 
     /**

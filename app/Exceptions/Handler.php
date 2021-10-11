@@ -65,8 +65,8 @@ class Handler extends ExceptionHandler
         }
         else
         {
-            return redirect()->back();
-            // return parent::render($request, $e);
+            // return redirect()->back();
+            return parent::render($request, $e);
         }
     }
 }

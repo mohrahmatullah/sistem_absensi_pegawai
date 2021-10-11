@@ -15,7 +15,7 @@ class Attendance extends Model
      */
     protected $primaryKey = 'id';
     protected $fillable = [
-        'nik', 'date_time', 'in_out'
+        'nik', 'date_time','employess', 'in_out'
     ];
 
     /**

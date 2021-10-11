@@ -34,5 +34,9 @@ class Employees extends Model
         return $this->belongsTo(Company::class);
     }
 
+    public function attedance()
+    {
+        return $this->hasMany(Attendance::class);
+    }
 
 }

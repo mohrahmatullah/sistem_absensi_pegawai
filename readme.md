@@ -3,7 +3,7 @@ Please make sure it is connected to the internet
 
 ### Project install
 		
-		git clone https://gitlab.com/mohrahmatullah/grtech_test_teknik
+		git clone https://github.com/mohrahmatullah/sistem_absensi_pegawai
 		
 
 ### Composer
@@ -18,6 +18,10 @@ Create database and create find these fields in the .env file and enter your inf
 		DB_USERNAME=
 		DB_PASSWORD=
 		
+
+### key
+	
+		php artisan key:generate
 
 ### Cache clear
 		
@@ -35,11 +39,6 @@ Create database and create find these fields in the .env file and enter your inf
 ### Make seed
 		
 		php artisan db:seed
-		
-
-### Or export database on directory
-		
-		sql/sql.sql
 		
 
 ### If use linux
@@ -61,11 +60,6 @@ Create database and create find these fields in the .env file and enter your inf
 		  
 ### Login info for admin
 		
-		email    : admin@grtech.com.my
-		password : password
-		
-### Login info for user
-		
-		email    : user@grtech.com.my
+		email    : admin@admin.com
 		password : password
 		

@@ -34,7 +34,6 @@
             <li><a href="{{route('admin.company.create')}}"><i class="fa fa-circle-o"></i> Company Create</a></li>
           </ul>
         </li>
-
         <li class="treeview">
           <a href="#">
             <i class="fa fa-users"></i> <span>Employees</span>
@@ -45,6 +44,19 @@
           <ul class="treeview-menu">
             <li><a href="{{route('admin.employees.index')}}"><i class="fa fa-circle-o"></i> Employees View</a></li>
             <li><a href="{{route('admin.employees.create')}}"><i class="fa fa-circle-o"></i> Employees Create</a></li>
+          </ul>
+        </li>
+
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-users"></i> <span>Absensi</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="{{route('admin.absensi.index')}}"><i class="fa fa-circle-o"></i> Absensi View</a></li>
+            <!-- <li><a href="{{route('admin.employees.create')}}"><i class="fa fa-circle-o"></i> Employees Create</a></li> -->
           </ul>
         </li>
         @endif
